@@ -18,14 +18,23 @@
 
 
 
+### Week 4
 
+##### Accomplishments since last report:
+
+- Submitted abstract to research symposium
+- Created Github Pages
+
+##### Scheduled tasks to be done before the next report:
+
+- SRS Document
 
 # TODO
 
 - [x] Design mockups
 - [x] Ask someone to design logo
-- [ ] Submit abstract to research symposium
-- [ ] Create github pages
+- [x] Submit abstract to research symposium
+- [x] Create github pages
 - [ ] Create front end(initial)
 - [ ] Polish off front end
 - [ ] Create a max heap class for the participant object

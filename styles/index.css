@@ -1,0 +1,57 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.container div {
+  height: 100vh;
+  display:flex;
+  scroll-snap-align: start;
+}
+
+.down-arrow img {
+  width: 90px;
+  height: 90px;
+  opacity: .5;
+}
+
+.down-arrow img:hover {
+  opacity: .8;
+}
+
+.card {
+  display: block;
+  height: 3px;
+  width: 300px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle {
+  position: absolute;
+  max-height: 100px;
+  width: 300px;
+  background-color: #555;
+  border-radius: 100%;
+}
+
+#normal{
+  position: relative;
+  background-color: #91b48f;
+  background-image: -webkit-linear-gradient(62deg, #91b48f 50%, #799477 50%);
+}
+#reverse{
+  position: relative;
+  background-color: #799477;
+  background-image: -webkit-linear-gradient(62deg, #799477 50%, #91b48f 50%);
+}
