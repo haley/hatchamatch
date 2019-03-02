@@ -90,7 +90,7 @@
 - [x] Homework #2
 - [ ] Homework #3
 - [ ] Software Development Plan
-- [ ] Software Requirements Documents
+- [x] Software Requirements Documents
 - [ ] Software Dev plan resubmit
 - [ ] ABCDR Demo
 - [ ] ABCDR Presentation
