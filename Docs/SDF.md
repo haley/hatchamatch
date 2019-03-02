@@ -24,7 +24,7 @@ This document presents the proposal for the Hatch-a-Match Project. The project p
 
 ## 5.0 Software Requirements
 
-###5.1 Introduction
+### 5.1 Introduction
 
 This system includes multiple componenets of the web app including the user interface as well as the algorithm for sorting the matchings. 
 
@@ -66,7 +66,7 @@ ____
 
 ### 5.4 Environment Requirements
 
-#####5.4.1 Development Environment Requirements
+##### 5.4.1 Development Environment Requirements
 
 5.4.1.1 The development environment shall be a text editor.
 
@@ -74,7 +74,7 @@ ____
 
 5.4.1.3 The script shall be written in Python.
 
-#####5.4.2 Execution Environment Requirements
+##### 5.4.2 Execution Environment Requirements
 
 5.4.2.1 The website shall be available to be accessed from Google Chrome.
 
