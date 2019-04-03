@@ -3,8 +3,12 @@
 }
 
 .blurb-image {
-  width: 25vh;
-  height: 25vh;
+  width: 25vw;
+  max-width: 250px;
+  min-width: 150px;
+  height: 25vw;
+  max-height: 250px;
+  min-height: 150px;
   background-color: #fff4bc;
   border-radius: 100%;
 }
@@ -18,14 +22,6 @@ body {
   display: block;
   height: 3px;
   width: 300px;
-}
-
-.circle {
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  background-color: #555;
-  border-radius: 100%;
 }
 
 .container {
@@ -57,7 +53,7 @@ body {
 
 .description > div > p {
   width: 25vh;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   font-family: "Arimo";
   font-weight: 100;
   text-align: center;
@@ -79,6 +75,10 @@ body {
   opacity: .8;
 }
 
+.footer {
+  flex-grow: 1;
+}
+
 .grey-box {
   background-color: #4f5964;
   width: 85vw;
@@ -88,7 +88,7 @@ body {
 }
 
 .grey-font {
-  color:#4f5964;;
+  color:#4f5964;
 }
 
 .logo {
@@ -98,22 +98,27 @@ body {
 }
 
 .next {
-  margin-top: 5vh;
-  /* margin-bottom: 5vh; */
   display: inline-table;
-  width: 22vh;
-  height: 6vh;
-  color: #4f5964;
+  width: 17vw;
+  height: 5vh;
+  color: #fff4bc;
+  /* opacity: 50%; */
   background-color: #fff4bc;
-  border-radius: 2vh;
+  border-radius: 1vh;
+  /* border-width: 2px;
+  border-style: solid; */
+  box-shadow: 0 0 8px #272525;
+  flex-grow: 1;
+  /* margin-left: 43vw; */
 }
 
 .next > p {
   padding-top: 1vh;
   font-family: "Arimo";
-  font-size: 3.5vh;
+  font-size: 2.1vh;
   font-weight: 100;
   text-align: center;
+  color: #4f5964;
   -webkit-font-smoothing: antialiased;
   /* margin-bottom: 5vh; */
 }
@@ -126,7 +131,7 @@ body {
 
 .page-subtitle {
   font-family: "Arimo";
-  font-size: 3vw;
+  font-size: 2.2vw;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   align-self: center;

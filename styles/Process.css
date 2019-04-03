@@ -1,0 +1,86 @@
+a {
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.selectors {
+  display:flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.selectors > form {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectors > form > p {
+  font-family: "Arimo";
+  font-size: 2.2vh;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  align-self: center;
+  color:#fdfbfb;
+  width: 15vw;
+  text-align: center;
+}
+
+.selectors > form > input {
+  height: 4vh;
+  width: 13vw;
+  border-radius: 8px;
+  margin-bottom: 22vh;
+}
+
+.process-subtitle {
+  font-family: "Arimo";
+  font-size: 1.8vw;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  align-self: center;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+}
+
+.process-next {
+  /* display: inline-table;
+  width: 17vw;
+  height: 5vh;
+  color: #4f5964; */
+  /* opacity: 50%; */
+  /* background-color: #fff4bc;
+  border-radius: 1vh;
+  /* border-width: 2px; */
+  /* border-style: solid;
+  box-shadow: 0 0 8px #272525;
+  flex-grow: 1; */
+  /* margin-left: 43vw; */
+  /* text-align: center; */
+  display: inline-table;
+  width: 17vw;
+  height: 5vh;
+  color: #fff4bc;
+  /* opacity: 50%; */
+  background-color: #fff4bc;
+  border-radius: 1vh;
+  /* border-width: 2px;
+  border-style: solid; */
+  box-shadow: 0 0 8px #272525;
+  flex-grow: 1;
+  /* margin-left: 43vw; */
+}
+
+.process-next > p {
+  /* text-align: center;
+  padding-top: 1.4vh; */
+  padding-top: 1vh;
+  font-family: "Arimo";
+  font-size: 2.1vh;
+  font-weight: 100;
+  text-align: center;
+  color: #4f5964;
+  -webkit-font-smoothing: antialiased;
+  /* margin-bottom: 5vh; */
+}
