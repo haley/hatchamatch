@@ -23,15 +23,25 @@ a {
   -webkit-font-smoothing: antialiased;
   align-self: center;
   color:#fdfbfb;
-  width: 15vw;
+  width: 14vw;
   text-align: center;
 }
 
 .selectors > form > input {
   height: 4vh;
-  width: 13vw;
+  width: 15vw;
   border-radius: 8px;
   margin-bottom: 22vh;
+  font-size: 2vh;
+}
+
+.selectors > form > div > select {
+  height: 4vh;
+  width: 8vw;
+  border-radius: 8px;
+  margin-bottom: 22vh;
+  font-size: 2vh;
+  color: #4f5964;
 }
 
 .process-subtitle {

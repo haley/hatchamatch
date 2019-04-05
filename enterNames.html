@@ -4,6 +4,37 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
   <title>Hatch-a-Match</title>
+  <script type="text/javascript">
+    window.onload = function () {
+            var bignumber = parseInt(window.localStorage.getItem('big'));
+            var bigcontainer = document.getElementById("bigs");
+            // Clear previous contents of the container
+            while (bigcontainer.hasChildNodes()) {
+                bigcontainer.removeChild(bigcontainer.lastChild);
+            }
+            for (i=0;i<bignumber;i++){
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "big" + i;
+                bigcontainer.appendChild(input);
+            }
+
+            var littlenumber = parseInt(window.localStorage.getItem('little'));
+            var littlecontainer = document.getElementById("littles");
+            // Clear previous contents of the container
+            while (littlecontainer.hasChildNodes()) {
+                littlecontainer.removeChild(littlecontainer.lastChild);
+            }
+            for (i=0;i<littlenumber;i++){
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "little" + i;
+                littlecontainer.appendChild(input);
+            }
+        }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -12,38 +43,12 @@
       <div class="names">
         <div>
           <h2 class="page-title grey-font">BIGS</h2>
-          <div>
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
+          <div id="bigs">
           </div>
         </div>
         <div>
           <h2 class="page-title grey-font">LITTLES</h2>
-          <div>
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
-            <input type="text" name="little_amount">
+          <div id="littles">
           </div>
         </div>
       </div>

@@ -4,6 +4,22 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
   <title>Hatch-a-Match</title>
+  <script type="text/javascript">
+    window.onload = function () {
+              var ddls = [document.getElementById('bigs').getElementsByTagName("select")[0],
+                document.getElementById('littles').getElementsByTagName("select")[0],
+                document.getElementById('prefs').getElementsByTagName("select")[0]];
+              // var ddl = document.getElementById('bigs').getElementsByTagName("select")[0];
+              for (let ddl of ddls) {
+                for (var i = 1; i <= 200; i++) {
+                    var theOption = new Option;
+                    theOption.text = i;
+                    theOption.value = i;
+                    ddl.options[i] = theOption;
+                }
+              }
+          };
+  </script>
 </head>
 <body>
   <div class="container">
@@ -13,31 +29,83 @@
       <div class="selectors">
         <form>
           <p>What's your email? So we can send you the final list.</p>
-          <input type="text" name="email">
-          <script type="text/javascript">
-            $(function(){
-              alert("My First Jquery Test");
-            });
-          </script>
+          <input id="email" type="text" name="email">
         </form>
         <form>
           <p>How many bigs do you have in your organization?</p>
-          <input type="text" name="big_amount">
+          <div id="bigs">
+            <select id="bignumber" name="bignumber" class="bignumber" runat="server">
+                <option value="0"></option>
+            </select>
+          </div>
         </form>
+
         <form>
           <p>How many littles do you have in your organization?</p>
-          <input type="text" name="little_amount">
+          <div id="littles">
+            <select id="littlenumber" name="littlenumber" class="littlenumber" runat="server">
+                <option value="0"></option>
+            </select>
+          </div>
         </form>
         <form>
           <p>How many preferences did each select?</p>
-          <input type="text" name="little_amount">
+          <div id="prefs">
+            <select id="prefsnumber" name="prefsnumber" class="prefsnumber" runat="server">
+                <option value="0"></option>
+            </select>
+          </div>
         </form>
       </div>
-      <a href="enterNames.html">
+      <a href="#" onclick="store();">
         <div class="process-next">
           <p>Lets Go!</p>
         </div>
       </a>
+      <script>
+        function store() {
+          var prefs = parseInt(document.getElementById("prefsnumber").value);
+          var bigs = parseInt(document.getElementById("bignumber").value);
+          var littles = parseInt(document.getElementById("littlenumber").value);
+          var at = document.getElementById("email").value.indexOf("@");
+          var email = document.getElementById("email").value;
+          submitOK = "true";
+          if (littles == 0) {
+            alert("Select how many littles you have!");
+            submitOK = "false";
+          }
+
+          if (bigs == 0) {
+            alert("Select how many bigs you have!");
+            submitOK = "false";
+          }
+
+          if (prefs == 0) {
+            alert("Select how many preferences each of your members selected!");
+            submitOK = "false";
+          }
+
+          if ((prefs > littles) || (prefs > bigs)) {
+            alert("The number of preferences" + prefs + " each person selects should be less than the lesser of the number of bigs" + bigs+" or number of littles" + littles + (prefs>littles) + (prefs>bigs));
+            submitOK = "false";
+          }
+
+          if (at == -1) {
+            alert("Not a valid e-mail!");
+            submitOK = "false";
+          }
+
+          window.localStorage.setItem('email', email);
+          window.localStorage.setItem('little', littles);
+          window.localStorage.setItem('big', bigs);
+          window.localStorage.setItem('pref', prefs);
+
+
+          if (submitOK == "true") {
+            window.location.href = "enterNames.html";
+          }
+        }
+      </script>
     </div>
   </div>
 </body>

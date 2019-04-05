@@ -20,7 +20,6 @@ a {
 .names > div > div {
   height: 50vh;
   width: 26vw;
-  display: inline-grid;
   overflow-y: scroll;
   text-align: -webkit-center;
   scrollbar-color: white;
@@ -58,6 +57,7 @@ input {
   width: 23vw;
   border-radius: 8px;
   height: 40px;
+  font-size: 2vh;
 }
 
 a {
