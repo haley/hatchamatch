@@ -1,0 +1,136 @@
+a {
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.background {
+  min-height: 100vh;
+  background-color: #91b48f;
+}
+
+.background > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* flex-grow: 1; */
+}
+
+.background > div > div {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Arimo";
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.pref-container {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.pref-container > div {
+  display:flex;
+  flex-direction: column;
+}
+
+select {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 13vw;
+  min-width: 120px;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 2vh;
+  align-self: center;
+  font-family: "Arimo";
+  color: grey;
+  font-weight: bold;
+}
+
+.selectors {
+  display:flex;
+  flex-grow: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selectors > form {
+  display: flex;
+  /* flex-grow: 1; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectors > form > p {
+  font-family: "Arimo";
+  font-size: 2.2vh;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  align-self: center;
+  color:#fdfbfb;
+  width: 14vw;
+  text-align: center;
+}
+
+.selectors > form > div > select {
+  height: 4vh;
+  width: 8vw;
+  border-radius: 8px;
+  margin-bottom: 22vh;
+  font-size: 2vh;
+  color: #4f5964;
+}
+
+.process-subtitle {
+  font-family: "Arimo";
+  font-size: 1.8vw;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  align-self: center;
+  margin-top: 1vh;
+  margin-bottom: 0vh;
+}
+
+.process-next {
+  /* display: inline-table;
+  width: 17vw;
+  height: 5vh;
+  color: #4f5964; */
+  /* opacity: 50%; */
+  /* background-color: #fff4bc;
+  border-radius: 1vh;
+  /* border-width: 2px; */
+  /* border-style: solid;
+  box-shadow: 0 0 8px #272525;
+  flex-grow: 1; */
+  /* margin-left: 43vw; */
+  /* text-align: center; */
+  display: inline-table;
+  width: 19vw;
+  height: 5vh;
+  color: #fff4bc;
+  /* opacity: 50%; */
+  background-color: #fff4bc;
+  border-radius: 1vh;
+  /* border-width: 2px;
+  border-style: solid; */
+  box-shadow: 0 0 8px #272525;
+  flex-grow: 1;
+  margin-top: 3vw;
+}
+
+.process-next > p {
+  /* text-align: center;
+  padding-top: 1.4vh; */
+  padding-top: 1vh;
+  font-family: "Arimo";
+  font-size: 2.1vh;
+  font-weight: 100;
+  text-align: center;
+  color: #4f5964;
+  -webkit-font-smoothing: antialiased;
+  /* margin-bottom: 5vh; */
+}

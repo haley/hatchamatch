@@ -1,0 +1,144 @@
+<head>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/preferences.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <title>Hatch-a-Match</title>
+  <script type="text/javascript">
+    window.onload = function () {
+            var bigsnames = window.localStorage.getItem('bigsnames').split(",");
+            var bigscontainer = document.getElementById("bigs");
+            var littlesnames = window.localStorage.getItem('littlesnames').split(",");
+            var littlescontainer = document.getElementById("littles");
+
+            var prefs = parseInt(window.localStorage.getItem('pref'));
+            //Clear previous contents of the container
+            while (bigscontainer.hasChildNodes()) {
+                bigscontainer.removeChild(bigscontainer.lastChild);
+            }
+            for (i=0;i<bigsnames.length;i++){
+              var bigsDiv = document.getElementById("bigs");
+              var bigDiv = document.createElement("div");
+              bigDiv.id = bigsnames[i];
+              bigsDiv.appendChild(bigDiv);
+              // and give it some content
+              var bigName = document.createTextNode(bigsnames[i]);
+              // add the text node to the newly created div
+              bigDiv.appendChild(bigName);
+              // Create an <input> element, set its type and name attributes
+              for (j=0; j<prefs; j++){
+                var select = document.createElement("select");
+                select.id = bigsnames[i] + j;
+                bigDiv.appendChild(select);
+                //console.log("creating " + bigsnames[j]);
+                // var ddl = document.getElementById('bigs').getElementsByTagName("select")[0]
+                var theOption = new Option;
+                theOption.text = "Preference #" + (j+1);
+                theOption.value = null;
+                select.options[0] = theOption;
+                for (var k = 0; k < littlesnames.length; k++) {
+                    var theOption = new Option;
+                    theOption.text = littlesnames[k];
+                    theOption.value = littlesnames[k];
+                    select.options[k+1] = theOption;
+                }
+              }
+            }
+
+            while (littlescontainer.hasChildNodes()) {
+                littlescontainer.removeChild(littlescontainer.lastChild);
+            }
+            for (i=0;i<littlesnames.length;i++){
+              var littlesDiv = document.getElementById("littles");
+              var littleDiv = document.createElement("div");
+              littleDiv.id = littlesnames[i];
+              littlesDiv.appendChild(littleDiv);
+              // and give it some content
+              var littleName = document.createTextNode(littlesnames[i]);
+              // add the text node to the newly created div
+              littleDiv.appendChild(littleName);
+              // Create an <input> element, set its type and name attributes
+              for (j=0; j<prefs; j++){
+                var select = document.createElement("select");
+                select.id = littlesnames[i] + j;
+                littleDiv.appendChild(select);
+                //console.log("creating " + littlesnames[j]);
+                // var ddl = document.getElementById('bigs').getElementsByTagName("select")[0]
+                var theOption = new Option;
+                theOption.text = "Preference #" + (j+1);
+                theOption.value = null;
+                select.options[0] = theOption;
+                for (var k = 0; k < bigsnames.length; k++) {
+                    var theOption = new Option;
+                    theOption.text = bigsnames[k];
+                    theOption.value = bigsnames[k];
+                    select.options[k+1] = theOption;
+                }
+              }
+            }
+        }
+  </script>
+</head>
+<body>
+  <div class="pref-container">
+    <div class="background">
+      <h1 class="page-title grey-font">HATCH-A-MATCH</h1>
+      <h2 class="process-subtitle grey-font">You're almost there! Select what order everyone ranked people in!</h2>
+      <div class="grey-font" id="littles">
+
+      </div>
+      <div class = "grey-font" id="bigs">
+
+      </div>
+      <a href="#" onclick="store();">
+        <div class="process-next">
+          <p>Get your matches!</p>
+        </div>
+      </a>
+      <script>
+        function store() {
+          var prefs = parseInt(document.getElementById("prefsnumber").value);
+          var bigs = parseInt(document.getElementById("bignumber").value);
+          var littles = parseInt(document.getElementById("littlenumber").value);
+          var at = document.getElementById("email").value.indexOf("@");
+          var email = document.getElementById("email").value;
+          submitOK = "true";
+          if (littles == 0) {
+            alert("Select how many littles you have!");
+            submitOK = "false";
+          }
+
+          if (bigs == 0) {
+            alert("Select how many bigs you have!");
+            submitOK = "false";
+          }
+
+          if (prefs == 0) {
+            alert("Select how many preferences each of your members selected!");
+            submitOK = "false";
+          }
+
+          if ((prefs > littles) || (prefs > bigs)) {
+            alert("The number of preferences" + prefs + " each person selects should be less than the lesser of the number of bigs" + bigs+" or number of littles" + littles + (prefs>littles) + (prefs>bigs));
+            submitOK = "false";
+          }
+
+          if (at == -1) {
+            alert("Not a valid e-mail!");
+            submitOK = "false";
+          }
+
+          window.localStorage.setItem('email', email);
+          window.localStorage.setItem('little', littles);
+          window.localStorage.setItem('big', bigs);
+          window.localStorage.setItem('pref', prefs);
+
+
+          if (submitOK == "true") {
+            window.location.href = "enterNames.html";
+          }
+        }
+      </script>
+    </div>
+  </div>
+</body>

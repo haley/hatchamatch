@@ -16,7 +16,7 @@
                 // Create an <input> element, set its type and name attributes
                 var input = document.createElement("input");
                 input.type = "text";
-                input.name = "big" + i;
+                input.id = "big" + i;
                 bigcontainer.appendChild(input);
             }
 
@@ -30,7 +30,7 @@
                 // Create an <input> element, set its type and name attributes
                 var input = document.createElement("input");
                 input.type = "text";
-                input.name = "little" + i;
+                input.id = "little" + i;
                 littlecontainer.appendChild(input);
             }
         }
@@ -52,11 +52,63 @@
           </div>
         </div>
       </div>
-      <a href="preferences.html">
+      <a href="#" onclick="storenames();">
         <div class="names-next">
           <p>Lets Set Their Preferences!</p>
         </div>
       </a>
+      <script type="text/javascript">
+        function storenames() {
+          var bignumber = parseInt(window.localStorage.getItem('big'));
+          var littlenumber = parseInt(window.localStorage.getItem('little'));
+          var bigarr = [];
+          var littlearr = [];
+          for (i=0;i<bignumber;i++){
+            var bigdiv = "big" + i;
+            var bigname = document.getElementById(bigdiv).value;
+            if (bigname != ""){
+              bigarr.push(bigname);
+            }
+          }
+          for (i=0;i<littlenumber;i++){
+            var littlediv = "little" + i;
+            var littlename = document.getElementById(littlediv).value;
+            if (littlename != ""){
+              littlearr.push(littlename);
+            }
+          }
+          var bignumber = parseInt(window.localStorage.getItem('big'));
+          var littlenumber = parseInt(window.localStorage.getItem('little'));
+          var litcon = true;
+          var bigcon = true;
+          var submitOK = true;
+          if (littlenumber != littlearr.length) {
+            if (littlearr.length != 0) {
+              var litcon = confirm("You said you had " + littlenumber + " littles but you only input "
+              + littlearr.length + " is that okay?");
+            } else {
+              alert("Input at least 1 little.");
+              submitOK = false;
+            }
+
+          }
+          if (bignumber != bigarr.length) {
+            if (bigarr.length != 0) {
+              var bigcon = confirm("You said you had " + bignumber + " of bigs but you only input "
+              + bigarr.length + " is that okay?");
+            } else {
+              alert("Input at least 1 big.");
+              submitOK = false;
+            }
+
+          }
+          if (litcon && bigcon && submitOK) {
+            window.localStorage.setItem('bigsnames', bigarr);
+            window.localStorage.setItem('littlesnames', littlearr);
+            window.location.href = "preferences.html";
+          }
+        }
+      </script>
     </div>
   </div>
 </body>
