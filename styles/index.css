@@ -11,6 +11,20 @@
   min-height: 150px;
   background-color: #fff4bc;
   border-radius: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurb-image > img {
+  width: 12vw;
+  height: 12vw;
+  max-width: 120px;
+  min-width: 60px;
+  max-height: 120px;
+  min-height: 60px;
+  border-radius: 0%;
 }
 
 body {
@@ -36,6 +50,17 @@ body {
   display:flex;
   scroll-snap-align: start;
   flex-direction: column;
+}
+
+.credit {
+  margin-left: 18px;
+  margin-bottom: 18px;
+  font-family: "Arimo";
+}
+
+.credit > a {
+  font-size: 2vh;
+  color:#4f5964;
 }
 
 .description {
@@ -95,6 +120,19 @@ body {
   flex-grow: 1;
   text-align: -webkit-center;
   margin-top: 30vh;
+  margin-left: 6vh;
+}
+
+.logo-image {
+  width: 40vw;
+  max-width: 400px;
+  min-width: 150px;
+  height: 40vw;
+  max-height: 400px;
+  min-height: 150px;
+  background-color: #4f5964;
+  border-radius: 100%;
+  margin-top: -10vh;
 }
 
 .next {

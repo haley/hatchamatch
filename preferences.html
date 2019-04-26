@@ -97,45 +97,52 @@
       </a>
       <script>
         function store() {
-          var prefs = parseInt(document.getElementById("prefsnumber").value);
-          var bigs = parseInt(document.getElementById("bignumber").value);
-          var littles = parseInt(document.getElementById("littlenumber").value);
-          var at = document.getElementById("email").value.indexOf("@");
-          var email = document.getElementById("email").value;
-          submitOK = "true";
-          if (littles == 0) {
-            alert("Select how many littles you have!");
-            submitOK = "false";
+          var prefs = parseInt(window.localStorage.getItem('pref'));
+          submitOK = true;
+
+          var bigsnames = window.localStorage.getItem('bigsnames').split(",");
+          var littlesnames = window.localStorage.getItem('littlesnames').split(",");
+          var littleDict = [];
+          var bigDict = [];
+          submitOK = true;
+          for (i=0; i<littlesnames.length; i++) {
+            var currentName = littlesnames[i];
+            var currentPrefs = [];
+            for (j=0; j<prefs; j++) {
+              var id = currentName + j;
+              var prefVal = document.getElementById(id).value;
+              if (prefVal == "null") {
+                submitOK = false
+              }
+              currentPrefs.push(prefVal);
+            }
+            littleDict[currentName] = currentPrefs;
           }
 
-          if (bigs == 0) {
-            alert("Select how many bigs you have!");
-            submitOK = "false";
+          for (i=0; i<bigsnames.length; i++) {
+            var currentName = bigsnames[i];
+            var currentPrefs = [];
+            for (j=0; j<prefs; j++) {
+              var id = currentName + j;
+              var prefVal = document.getElementById(id).value;
+              if (prefVal == "null") {
+                submitOK = false
+              }
+              currentPrefs.push(prefVal);
+              console.log(currentPrefs);
+            }
+            littleDict[currentName] = currentPrefs;
           }
 
-          if (prefs == 0) {
-            alert("Select how many preferences each of your members selected!");
-            submitOK = "false";
-          }
-
-          if ((prefs > littles) || (prefs > bigs)) {
-            alert("The number of preferences" + prefs + " each person selects should be less than the lesser of the number of bigs" + bigs+" or number of littles" + littles + (prefs>littles) + (prefs>bigs));
-            submitOK = "false";
-          }
-
-          if (at == -1) {
-            alert("Not a valid e-mail!");
-            submitOK = "false";
-          }
-
-          window.localStorage.setItem('email', email);
-          window.localStorage.setItem('little', littles);
-          window.localStorage.setItem('big', bigs);
-          window.localStorage.setItem('pref', prefs);
 
 
-          if (submitOK == "true") {
-            window.location.href = "enterNames.html";
+          if (submitOK == true) {
+            window.location.href = "confirmation.html";
+          } else {
+            submitOK = confirm("Not everyone's preferences are filled in, is that okay?");
+            if (submitOK == true) {
+              window.location.href = "confirmation.html";
+            }
           }
         }
       </script>
