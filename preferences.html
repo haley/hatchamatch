@@ -1,4 +1,5 @@
 <head>
+  <script type="text/javascript" src="./heap.js"></script>
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/preferences.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -87,6 +88,23 @@
       <div class="grey-font" id="littles">
 
       </div>
+      
+      <script>
+      $(document).ready(function(){
+        $("#b1").click(function(){
+          $.ajax({
+            method: "GET",
+            url: "type your python script path here",
+            data: {"place" : value},
+            dataType: "text",
+            success: function(result){
+              var data=JSON.parse(result);
+              console.log(result);
+            }
+          });
+        });
+      });
+      </script>
       <div class = "grey-font" id="bigs">
 
       </div>
