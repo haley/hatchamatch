@@ -28,10 +28,6 @@
       <h2 class="process-subtitle grey-font">First, tell us a little bit about your process.</h2>
       <div class="selectors">
         <form>
-          <p>What's your email? So we can send you the final list.</p>
-          <input id="email" type="text" name="email">
-        </form>
-        <form>
           <p>How many bigs do you have in your organization?</p>
           <div id="bigs">
             <select id="bignumber" name="bignumber" class="bignumber" runat="server">
@@ -67,8 +63,6 @@
           var prefs = parseInt(document.getElementById("prefsnumber").value);
           var bigs = parseInt(document.getElementById("bignumber").value);
           var littles = parseInt(document.getElementById("littlenumber").value);
-          var at = document.getElementById("email").value.indexOf("@");
-          var email = document.getElementById("email").value;
           submitOK = "true";
           if (littles == 0) {
             alert("Select how many littles you have!");
@@ -90,12 +84,6 @@
             submitOK = "false";
           }
 
-          if (at == -1) {
-            alert("Not a valid e-mail!");
-            submitOK = "false";
-          }
-
-          window.localStorage.setItem('email', email);
           window.localStorage.setItem('little', littles);
           window.localStorage.setItem('big', bigs);
           window.localStorage.setItem('pref', prefs);

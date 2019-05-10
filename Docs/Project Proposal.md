@@ -4,8 +4,6 @@
 
 3.0 Project Proposal
 
-5.0 Software Requirements
-
 ## 3.0 Project Proposal
 
 This document presents the proposal for the Hatch-a-Match Project. The project performs matching of bigs and littles in on campus organizations using a genetic algorithm.
@@ -21,64 +19,3 @@ This document presents the proposal for the Hatch-a-Match Project. The project p
 ### 3.0.2 Justification
 
 ​	This project will allow me to develop a fully functional web application which will expand my skills in front end development. It will also allow me to demonstrate my experience in developing optimal algorithms. This solves a problem that can potentially have an extremely large search space where finding the best possible match could take N! time. This decreases the amount of time spent searching but is still able to find a good match. I am proficient in Python, but will be learning a lot of new material about front end development which will allow me to grow my skills while still being able to finish in one semester. I created a proof of concept for this project last semester called “Big Little” in which I developed the basic ideas, but this semester I will be working on adding data structures to organize my work as well as adapting for a variable number of people in the matching process. 
-
-## 5.0 Software Requirements
-
-### 5.1 Introduction
-
-This system includes multiple componenets of the web app including the user interface as well as the algorithm for sorting the matchings. 
-
-____
-
-### 5.2 Functional Requirements
-
-##### 5.2.1 Graphical User Interface
-
-5.2.1.1 The graphical user interface shall provide information about the process and how the web app works.
-
-5.2.1.2 The graphical user interface shall allow for the input of the "bigs" and the "littles" that they are matching up on a separate page.
-
-5.2.1.3 The graphical user interface shall provide a place to input the preferences of each person previously input in the bigs and littles page.
-
-5.2.1.4 The graphical user interface shall pop-up errors if the user tries to move on without completing all of the input options.
-
-5.2.1.5 The graphical user interface shall ask for specifics about the organizer's process.
-
-​	The specifics will include:
-
-  * The number of people in the process
-  * The organizer's email
-  * The number of preferences that everyone in the process selected
-
-5.2.1.6 The graphical user interface shall provide a confirmation screen that the information was submitted and that the organizer will recieve an email with the matches.
-
-____
-
-### 5.3 Performance Requirements
-
-##### 5.3.1 Return Time
-
-5.3.1.1 The application shall send an email to the organizer within 15 minutes of the organizer confirming the results.
-
-5.3.1.2 The application shall move from page to page in less than 2 seconds of the user's time.
-
-____
-
-### 5.4 Environment Requirements
-
-##### 5.4.1 Development Environment Requirements
-
-5.4.1.1 The development environment shall be a text editor.
-
-5.4.1.2 The website shall be written in CSS and HTML.
-
-5.4.1.3 The script shall be written in Python.
-
-##### 5.4.2 Execution Environment Requirements
-
-5.4.2.1 The website shall be available to be accessed from Google Chrome.
-
-5.4.2.2 The website shall be available to be accessed on Github Pages.
-
-____
-

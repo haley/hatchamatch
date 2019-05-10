@@ -70,6 +70,91 @@
 
 
 
+### Week 7-8
+
+**Accomplishments since last report:**
+
+- Figured out how to use local storage on a browser
+- Close to being finished with the aesthetics and functionality of the front end
+
+**Scheduled tasks to be done before the next report:**
+
+- Get test data to build out the algorithm
+
+**Noteworthy risks, concerns, or problems:**
+
+- Nothing of note
+
+
+
+### Week 9-10
+
+**Accomplishments since last report:**
+
+- Got the test data from Creare service organization
+- Finished Homework#3
+
+**Scheduled tasks to be done before the next report:**
+
+- Start preliminary algorithm
+
+**Noteworthy risks, concerns, or problems:**
+
+- Nothing of note
+
+
+
+### Week 11-13
+
+**Accomplishments since last report:**
+
+- Started a preliminary algorithm in Python using creare's test data
+- Got the logo back from the graphic designer
+
+**Scheduled tasks to be done before the next report:**
+
+- Build out algorithm and start connecting it to the front end
+
+**Noteworthy risks, concerns, or problems:**
+
+- Nothing of note
+
+
+
+### Week 14-16
+
+**Accomplishments since last report:**
+
+- built out algorithm
+- started translating algorithm from Python to Javascript
+
+**Scheduled tasks to be done before the next report:**
+
+- Finish the algorithm and connect it to the front end
+
+**Noteworthy risks, concerns, or problems:**
+
+- I don't have a server so I'm going to need to run the script in the browser which I won't be able to do in Python from github pages so I need to convert the script to javascript
+
+
+
+### Week 17-18
+
+**Accomplishments since last report:**
+
+- Got extension on project
+- Finished up documentation
+
+**Scheduled tasks to be done before the next report:**
+
+- Finish connecting the front and back end and trouble shoot the bugs in my project
+
+**Noteworthy risks, concerns, or problems:**
+
+- Dealing with the bugs and trying to pinpoint them without any visible errors
+
+
+
 # TODO
 
 - [x] Design mockups
@@ -77,20 +162,17 @@
 - [x] Submit abstract to research symposium
 - [x] Create github pages
 - [x] Create front end(initial)
-- [ ] Polish off front end
-- [ ] Create a max heap class for the participant object
-- [ ] Move relevant files from big little to hatch-a-match
+- [x] Polish off front end
+- [x] Create a max heap class for the participant object
 - [ ] Make backend work with variable numbers of people
-- [ ] create multiple testcases (Test specifically auto 1-1 matching)
-- [ ] Test on Ignatians preferences
-- [ ] Test on Creare's preferences
-- [ ] Build out email functionality
+- [x] create multiple testcases (Test specifically auto 1-1 matching)
+- [x] Test on Creare's preferences
 - [ ] Connect front end to back end
 - [x] Homework #1
 - [x] Homework #2
-- [ ] Homework #3
+- [x] Homework #3
 - [ ] Software Development Plan
 - [x] Software Requirements Documents
-- [ ] Software Dev plan resubmit
-- [ ] ABCDR Demo
-- [ ] ABCDR Presentation
+- [x] Software Dev plan resubmit
+- [x] ABCDR Demo
+- [x] ABCDR Presentation

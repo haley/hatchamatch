@@ -88,7 +88,7 @@
       <div class="grey-font" id="littles">
 
       </div>
-      
+
       <script>
       $(document).ready(function(){
         $("#b1").click(function(){
@@ -120,9 +120,8 @@
 
           var bigsnames = window.localStorage.getItem('bigsnames').split(",");
           var littlesnames = window.localStorage.getItem('littlesnames').split(",");
-          var littleDict = [];
-          var bigDict = [];
           submitOK = true;
+
           for (i=0; i<littlesnames.length; i++) {
             var currentName = littlesnames[i];
             var currentPrefs = [];
@@ -134,7 +133,7 @@
               }
               currentPrefs.push(prefVal);
             }
-            littleDict[currentName] = currentPrefs;
+            window.localStorage.setItem(currentName, currentPrefs);
           }
 
           for (i=0; i<bigsnames.length; i++) {
@@ -145,11 +144,12 @@
               var prefVal = document.getElementById(id).value;
               if (prefVal == "null") {
                 submitOK = false
+              } else {
+                currentPrefs.push(prefVal);
               }
-              currentPrefs.push(prefVal);
-              console.log(currentPrefs);
+
             }
-            littleDict[currentName] = currentPrefs;
+            window.localStorage.setItem(currentName, currentPrefs);
           }
 
 

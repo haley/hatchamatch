@@ -1,11 +1,15 @@
 .background {
   min-height: 100vh;
   background-color: #91b48f;
+  text-align: -webkit-center;
 }
 
 table {
+  text-align: center;
   border = 1px;
   border-collapse: collapse;
+  width: 60vw;
+  table-layout: fixed;
 }
 
 th, td {
